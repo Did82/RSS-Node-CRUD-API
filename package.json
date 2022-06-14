@@ -1,0 +1,47 @@
+{
+  "name": "rss-node-crud-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon src/index.ts",
+    "build": "npm run lint && tsc src/index.ts",
+    "start:prod": "npm run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Did82/RSS-Node-CRUD-API.git"
+  },
+  "keywords": [
+    "rss",
+    "node",
+    "crud",
+    "api",
+    "rest",
+    "Did82"
+  ],
+  "author": "Did82",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Did82/RSS-Node-CRUD-API/issues"
+  },
+  "homepage": "https://github.com/Did82/RSS-Node-CRUD-API#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.42",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.7.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "uuid": "^8.3.2"
+  }
+}
