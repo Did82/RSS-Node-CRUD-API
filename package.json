@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon src/index.ts",
-    "build": "npm run lint && tsc src/index.ts",
+    "build": "npm run lint && tsc -p tsconfig.json",
     "start:prod": "npm run build && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**/*.ts"
