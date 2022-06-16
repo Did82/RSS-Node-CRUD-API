@@ -8,7 +8,9 @@
     "build": "npm run lint && tsc -p tsconfig.json",
     "start:prod": "npm run build && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src/**/*.ts"
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf dist",
+    "start:multi": "npm run clean && npm run build && node dist/cluster.js"
   },
   "repository": {
     "type": "git",
