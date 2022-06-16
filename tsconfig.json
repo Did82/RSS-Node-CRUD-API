@@ -10,11 +10,11 @@
     "outDir": "./dist",
     "baseUrl": "./src",
     "typeRoots": ["./node_modules/@types"],
-    "types": ["node"],
+    "types": ["node", "jest"],
     "moduleResolution": "Node",
     "incremental": true,
     "esModuleInterop": true,
   },
   "include": ["**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules"]
 }

@@ -3,6 +3,10 @@ import server from './server';
 
 const port = process.env.PORT || 3000;
 
-server.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
-});
+export const app = () => {
+  server.listen(port, () => {
+    console.log(`🚀 Server ready at http://localhost:${port}`);
+  });
+};
+
+app();
