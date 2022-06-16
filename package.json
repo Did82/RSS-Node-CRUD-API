@@ -9,7 +9,7 @@
     "start:prod": "npm run build && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**/*.ts",
-    "clean": "rm -rf dist",
+    "clean": "ts-node src/utils/clean.ts",
     "start:multi": "npm run clean && npm run build && node dist/cluster.js"
   },
   "repository": {
