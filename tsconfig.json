@@ -15,6 +15,6 @@
     "incremental": true,
     "esModuleInterop": true,
   },
-  "include": ["**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

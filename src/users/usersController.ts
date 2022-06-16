@@ -49,7 +49,6 @@ const updateUser = async (req, res, id) => {
       const user: IUser = JSON.parse(body);
       if (validateUser(user)) {
         const newUser = await db.updateOne(user, id);
-        console.log(newUser);
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(newUser));
       } else {
