@@ -32,7 +32,7 @@ const createUser = async (req: IncomingMessage, res: ServerResponse) => {
   const body = await getBody(req);
   const user: IUser = JSON.parse(body);
   if (validateUser(user)) {
-    const newUser = await db.addOne(user);
+    const newUser: IUser = await db.addOne({ username: user.username, age: user.age, hobbies: user.hobbies });
     res.writeHead(201, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify(newUser));
   } else {
@@ -48,7 +48,7 @@ const updateUser = async (req, res, id) => {
       const body = await getBody(req);
       const user: IUser = JSON.parse(body);
       if (validateUser(user)) {
-        const newUser = await db.updateOne(user, id);
+        const newUser = await db.updateOne({ username: user.username, age: user.age, hobbies: user.hobbies }, id);
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(newUser));
       } else {

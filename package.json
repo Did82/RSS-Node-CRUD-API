@@ -10,7 +10,7 @@
     "test": "jest",
     "lint": "eslint src/**/*.ts",
     "clean": "ts-node src/utils/clean.ts",
-    "start:multi": "npm run clean && npm run build && node dist/cluster.js"
+    "start:multi": "npm run build && node dist/cluster.js"
   },
   "repository": {
     "type": "git",
